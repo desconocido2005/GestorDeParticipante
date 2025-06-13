@@ -1,0 +1,45 @@
+<form class="max-w-lg mx-auto bg-white shadow-md rounded-xl p-6 space-y-4" (ngSubmit)="saveParticipante()"
+    #form="ngForm">
+
+    <div>
+        <label for="name" class="block text-gray-700 font-semibold mb-1">Nombre:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="participante.nombre"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+    </div>
+
+    <div>
+        <label for="email" class="block text-gray-700 font-semibold mb-1">Correo:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="participante.correo"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+    </div>
+
+    <div>
+        <label for="equipo" class="block text-gray-700 font-semibold mb-1">Equipo:</label>
+        <input type="number" id="equipo" name="equipo" [(ngModel)]="participante.equipo"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+    </div>
+
+    <div>
+        <label for="especialidad" class="block text-gray-700 font-semibold mb-1">Especialidad:</label>
+        <input type="text" id="especialidad" name="especialidad" [(ngModel)]="participante.especialidad"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+    </div>
+
+    <div>
+        <label for="nivel" class="block text-gray-700 font-semibold mb-1">Nivel:</label>
+        <input type="text" id="nivel" name="nivel" [(ngModel)]="participante.nivel"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required>
+    </div>
+
+    <div class="flex justify-center">
+        <button type="submit"
+            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-200">
+            {{ isEditing ? 'Actualizar' : 'Guardar Participante' }}
+        </button>
+    </div>
+</form>
